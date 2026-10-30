@@ -181,7 +181,8 @@ test("every feature stays readable at 320px in both directions", async ({
       "services",
     ]) {
       await page.goto(`/${locale}/${route}`);
-      await expect(page.locator("main")).toBeVisible();
+      await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= innerWidth,
