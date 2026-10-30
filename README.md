@@ -2,14 +2,20 @@
 
 واجهة زيارة تفاعلية للهاكاثون باستخدام **Next.js + React + TypeScript + Tailwind CSS**، ومنظمة حسب الهيكل المطلوب. التطبيق الفعلي داخل [grand/](./grand/).
 
+[المستودع العام على GitHub](https://github.com/ahmedelgharieb2511-hue/gem-explorer)
+
 ## التشغيل السريع
 
 تحتاج إلى Node.js 22 أو أحدث.
 
 ```sh
+git clone https://github.com/ahmedelgharieb2511-hue/gem-explorer.git
+cd gem-explorer
 npm run install:app
 npm run dev
 ```
+
+لو المشروع موجود عندك بالفعل، ابدأ من `npm run install:app` داخل مجلد المشروع الرئيسي.
 
 افتح [النسخة العربية](http://localhost:3000/ar) أو [النسخة الإنجليزية](http://localhost:3000/en).
 
