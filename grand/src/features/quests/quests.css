@@ -1,0 +1,156 @@
+.quest-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 28px;
+  align-items: start;
+}
+.quest-story {
+  padding: 35px;
+  background: #112a3b;
+  color: #f7f1e3;
+}
+.quest-story .eyebrow {
+  color: #d7bd8d;
+}
+.quest-story .muted {
+  color: #c9d0c5;
+}
+.quest-symbol {
+  display: block;
+  font-size: 88px;
+  line-height: 1.1;
+  margin-bottom: 36px;
+  color: #cfb27f;
+}
+.quest-story h2 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.quest-story p {
+  line-height: 1.8;
+}
+.quest-progress {
+  height: 5px;
+  background: #557061;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-top: 30px;
+}
+.quest-progress > span {
+  display: block;
+  height: 100%;
+  background: #d4b781;
+}
+.quest-local-note {
+  border-top: 1px solid #526457;
+  padding-top: 22px;
+  margin-top: 28px;
+  font-size: 0.875rem;
+}
+.quest-card {
+  padding: 36px;
+  min-height: 500px;
+}
+.quest-card h2 {
+  font-size: 1.75rem;
+  line-height: 1.4;
+  margin-block: 16px 26px;
+}
+.quest-options {
+  border: 0;
+  padding: 0;
+  margin: 0 0 27px;
+  display: grid;
+  gap: 12px;
+}
+.quest-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #d8cfbd;
+  padding: 16px;
+  min-height: 68px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.quest-option.is-selected {
+  border-color: #a47b42;
+  background: #eee4d0;
+}
+.quest-option input {
+  width: 17px;
+  height: 17px;
+  accent-color: #805b18;
+}
+.quest-option-letter {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cabda5;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+.quest-medal {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  font-size: 45px;
+  background: #eee3c8;
+  color: #99703d;
+  border-radius: 50%;
+}
+.quest-review {
+  list-style: none;
+  margin: 26px 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+.quest-review li {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e1d8c7;
+}
+.quest-review p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin-block: 8px;
+}
+.quest-review a {
+  font-size: 0.875rem;
+  color: #73582e;
+}
+.quest-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (max-width: 850px) {
+  .quest-columns {
+    grid-template-columns: 1fr;
+  }
+  .quest-story {
+    padding: 28px;
+  }
+  .quest-symbol {
+    font-size: 60px;
+    margin-bottom: 18px;
+  }
+  .quest-card {
+    padding: 26px;
+    min-height: 0;
+  }
+}
+@media (max-width: 480px) {
+  .quest-option {
+    padding: 13px;
+    gap: 10px;
+  }
+  .quest-option-letter {
+    display: none;
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+grand/node_modules/
+grand/.next/
+grand/test-results/
+grand/playwright-report/
+*.tsbuildinfo
+.env*
+!.env.example

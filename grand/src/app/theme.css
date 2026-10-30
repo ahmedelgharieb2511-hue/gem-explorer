@@ -1,0 +1,684 @@
+/* Desert pigments and two color schemes. Photography is never inverted. */
+:root {
+  --paper: #f8edd9;
+  --sand-light: #fff8e9;
+  --sand: #e7c78d;
+  --clay: #ac5034;
+  --turquoise: #187b78;
+}
+body {
+  background-image:
+    radial-gradient(ellipse at 0% 15%, #e2b67345, transparent 42%),
+    radial-gradient(ellipse at 100% 65%, #be755826, transparent 38%),
+    linear-gradient(180deg, #fbf2e3, var(--paper) 60%, #f1dfbb);
+}
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d8c298;
+  border-radius: 50%;
+  background: #fbefce;
+  color: #755224;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.theme-toggle:hover {
+  background: #f3dca4;
+  border-color: #b99552;
+  box-shadow: 0 3px 12px #b28b3820;
+}
+.theme-toggle > svg {
+  transition: transform 0.25s ease;
+}
+.theme-toggle:hover > svg {
+  transform: rotate(-14deg);
+}
+.discovery-strip {
+  background: #f3dfb4b3;
+  border-bottom-color: #d3b477;
+}
+.journey-section {
+  background: linear-gradient(120deg, #eed0a0, #f8e9cc 65%, #e8e6cb);
+}
+.journey-card {
+  border-radius: 11px;
+  border-color: #d6b47c;
+  background: #fff5de;
+}
+.journey-card:nth-child(2) {
+  background: #eaf2e8;
+  border-color: #b6cbb7;
+}
+.journey-card:nth-child(2) .journey-card-top {
+  color: #247b70;
+}
+.journey-card:nth-child(3) {
+  background: #f8e9dd;
+  border-color: #ddb79d;
+}
+.journey-card:nth-child(3) .journey-card-top {
+  color: #ac5034;
+}
+.artifact-card-link {
+  border-radius: 9px;
+  border-color: #dfc79f;
+}
+.artifact-card-open {
+  color: #7f5823;
+  background: #fff2cc;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.artifact-card-link:hover .artifact-card-open {
+  background: #dfba69;
+  transform: rotate(5deg);
+}
+.artifact-card-category {
+  background: #fff3dbe8;
+  color: #6d4b1d;
+  border-radius: 5px;
+}
+.service-card {
+  border-radius: 12px;
+  border-top: 3px solid #bf9446;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+.service-card:nth-child(2) {
+  border-top-color: #3f8b7e;
+  background: #f3f7ec;
+}
+.service-card:nth-child(3) {
+  border-top-color: #bf7451;
+  background: #fff5ec;
+}
+.service-card:nth-child(4) {
+  border-top-color: #456d94;
+  background: #f4f5ed;
+}
+.service-card:hover {
+  box-shadow: 0 12px 32px #8b603b12;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button:not(:disabled) > svg:last-child,
+  .text-link > svg:last-child,
+  .footer-links svg {
+    transition: transform 0.2s ease;
+  }
+  .button:not(:disabled):hover > svg:last-child,
+  .text-link:hover > svg:last-child,
+  .footer-links a:hover svg {
+    transform: translate(2px, -2px);
+  }
+  [dir="rtl"] .button:not(:disabled):hover > svg:last-child,
+  [dir="rtl"] .text-link:hover > svg:last-child {
+    transform: translate(-2px, -2px);
+  }
+}
+[data-theme="dark"] {
+  --paper: #14262d;
+  --ink: #f0e6d2;
+  --lapis: #8ab8d0;
+  --gold: #e0bb6c;
+  --accent: #e0bb6c;
+  --line: #45524f;
+  --muted: #c3baa9;
+  --sand-light: #263832;
+  --sand: #b89b61;
+  --clay: #db9c76;
+  --turquoise: #83c6b6;
+  color-scheme: dark;
+}
+[data-theme="dark"] body {
+  background-color: #14262d;
+  background-image:
+    radial-gradient(ellipse at 0% 15%, #6650312e, transparent 45%),
+    radial-gradient(ellipse at 100% 65%, #25595038, transparent 45%),
+    linear-gradient(180deg, #14262d, #182c30 65%, #262b27);
+}
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .primary-nav {
+  background: #15282ff5;
+}
+[data-theme="dark"] .announcement {
+  background: #0d1c23;
+  color: #dfca9d;
+}
+[data-theme="dark"] .brand-mark,
+[data-theme="dark"] .tiny-star {
+  color: #d7b36c;
+}
+[data-theme="dark"] .nav-cta {
+  background: #286c76;
+  border-color: #49858b;
+  color: #fff9ec;
+}
+[data-theme="dark"] .menu-toggle {
+  border-color: #68705d;
+}
+[data-theme="dark"] .theme-toggle {
+  background: #3a3427;
+  color: #f0cb79;
+  border-color: #796542;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  background: #4a402b;
+  border-color: #b99b5e;
+}
+[data-theme="dark"] .button {
+  background: #247478;
+  color: #fffaf0;
+  border-color: #3e8b8b;
+}
+[data-theme="dark"] .button:hover {
+  background: #2c8586;
+}
+[data-theme="dark"] .button-secondary {
+  background: #21363a;
+  color: #e9dec7;
+  border-color: #68705c;
+}
+[data-theme="dark"] .button-secondary:hover {
+  background: #304749;
+}
+[data-theme="dark"] .button-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: transparent;
+}
+[data-theme="dark"] .hero-buttons .button {
+  background: #ddba6d;
+  border-color: #ddba6d;
+  color: #112a3b;
+}
+[data-theme="dark"] .panel {
+  background: #1e3238;
+  border-color: #45524f;
+  box-shadow: 0 8px 28px #00000016;
+}
+[data-theme="dark"] .badge {
+  background: #3c382a;
+  color: #e4cd98;
+}
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field select,
+[data-theme="dark"] .field textarea,
+[data-theme="dark"] input.field,
+[data-theme="dark"] select.field,
+[data-theme="dark"] textarea.field {
+  background: #15292f;
+  border-color: #58645c;
+  color: #f0e6d2;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #a89f8e;
+}
+[data-theme="dark"] .field-error,
+[data-theme="dark"] .form-error {
+  color: #f1ae91;
+}
+[data-theme="dark"] .discovery-strip {
+  background: #34372c99;
+  border-color: #625a3c;
+}
+[data-theme="dark"] .discovery-strip > div {
+  border-color: #625a3c;
+}
+[data-theme="dark"] .journey-section {
+  background: linear-gradient(120deg, #2d342d, #1d3437 70%, #2e3029);
+  border-color: #685739;
+}
+[data-theme="dark"] .journey-card {
+  background: #2c342b;
+  border-color: #685f44;
+}
+[data-theme="dark"] .journey-card:nth-child(2) {
+  background: #1e3835;
+  border-color: #426d5e;
+}
+[data-theme="dark"] .journey-card:nth-child(3) {
+  background: #382f29;
+  border-color: #7b5b43;
+}
+[data-theme="dark"] .journey-card:hover {
+  background: #304142;
+}
+[data-theme="dark"] .journey-card-top {
+  color: #dfbd77;
+}
+[data-theme="dark"] .journey-card:nth-child(2) .journey-card-top {
+  color: #90c7b4;
+}
+[data-theme="dark"] .journey-card:nth-child(3) .journey-card-top {
+  color: #dfa27c;
+}
+[data-theme="dark"] .journey-card-top > span {
+  color: #bca77b;
+}
+[data-theme="dark"] .service-card {
+  background: #243633;
+}
+[data-theme="dark"] .service-card:nth-child(2) {
+  background: #203b35;
+}
+[data-theme="dark"] .service-card:nth-child(3) {
+  background: #38312b;
+}
+[data-theme="dark"] .service-card:nth-child(4) {
+  background: #243542;
+}
+[data-theme="dark"] .collection-intro,
+[data-theme="dark"] .collection-filter-field label,
+[data-theme="dark"] .collection-result-bar,
+[data-theme="dark"] .collection-disclaimer,
+[data-theme="dark"] .artifact-card-description,
+[data-theme="dark"] .artifact-card-footer,
+[data-theme="dark"] .artifact-detail-description,
+[data-theme="dark"] .artifact-story > p,
+[data-theme="dark"] .artifact-facts dt {
+  color: var(--muted);
+}
+[data-theme="dark"] .collection-edition {
+  color: #d3b67e;
+  border-color: #7a6a49;
+}
+[data-theme="dark"] .collection-search {
+  background: #1d333a;
+  border-color: #56645b;
+}
+[data-theme="dark"] .collection-search input {
+  color: var(--ink);
+}
+[data-theme="dark"] .collection-toolbar,
+[data-theme="dark"] .artifact-facts,
+[data-theme="dark"] .artifact-story {
+  border-color: var(--line);
+}
+[data-theme="dark"] .artifact-card-link {
+  background: #1e3238;
+  border-color: #52604e;
+}
+[data-theme="dark"] .artifact-card-image {
+  background: #27352f;
+}
+[data-theme="dark"] .artifact-detail-image {
+  background: #263631;
+}
+[data-theme="dark"] .artifact-card-category {
+  background: #19333de8;
+  color: #ead6a7;
+}
+[data-theme="dark"] .artifact-card-footer {
+  border-color: #425149;
+}
+[data-theme="dark"] .artifact-detail-subtitle {
+  color: #e0bb6c;
+}
+[data-theme="dark"] .artifact-qr {
+  background: #30362b;
+  border-color: #686044;
+}
+[data-theme="dark"] .artifact-skeleton {
+  background: #1e3238;
+  border-color: #45524f;
+}
+[data-theme="dark"] .artifact-skeleton > div,
+[data-theme="dark"] .artifact-skeleton > span {
+  background: #33443e;
+}
+[data-theme="dark"] .artifact-qr-actions input {
+  background: #15292f;
+  color: var(--ink);
+}
+[data-theme="dark"] .tour-duration {
+  border-color: #58654f;
+}
+[data-theme="dark"] .tour-duration.is-selected {
+  background: #3d422f;
+  border-color: #b89b61;
+}
+[data-theme="dark"] .tour-interest,
+[data-theme="dark"] .tour-stop-list li {
+  border-color: #45524f;
+}
+[data-theme="dark"] .tour-result {
+  background: #263b3d;
+}
+[data-theme="dark"] .tour-stop-number,
+[data-theme="dark"] .tour-orbit {
+  color: #e0c07f;
+  border-color: #8a7952;
+}
+[data-theme="dark"] .map-warning {
+  background: #3c382a;
+  border-color: #75623f;
+  color: #ead8b4;
+}
+[data-theme="dark"] .map-floor-buttons {
+  background: #263f45;
+}
+[data-theme="dark"] .map-floor-buttons button {
+  color: #d8cdb7;
+}
+[data-theme="dark"] .map-floor-buttons button.is-selected {
+  background: #3b6266;
+  color: #fff8e8;
+}
+[data-theme="dark"] .map-legend {
+  color: #c7bba4;
+  border-color: #45524f;
+}
+[data-theme="dark"] .map-artifact-list button {
+  background: #20363b;
+  color: var(--ink);
+  border-color: #56634f;
+}
+[data-theme="dark"] .map-artifact-list button.is-selected {
+  background: #384333;
+  border-color: #b4975b;
+}
+[data-theme="dark"] .map-route-note {
+  border-color: #45524f;
+}
+[data-theme="dark"] .scan-switch {
+  background: #273d40;
+}
+[data-theme="dark"] .scan-switch button {
+  color: #cfc4af;
+}
+[data-theme="dark"] .scan-switch .is-active {
+  background: #416266;
+  color: #fff5df;
+}
+[data-theme="dark"] .scan-viewfinder {
+  background: #21373c;
+  color: #cfc7b0;
+  border-color: #6c6c52;
+}
+[data-theme="dark"] .scan-demo-notice,
+[data-theme="dark"] .audio-demo-note {
+  background: #40392a;
+  border-color: #bea066;
+  color: #ead8af;
+}
+[data-theme="dark"] .scan-similar,
+[data-theme="dark"] .scan-similar a {
+  border-color: #566052;
+}
+[data-theme="dark"] .scan-similar a:hover {
+  background: #34463f;
+}
+[data-theme="dark"] .scan-error {
+  background: #452f28;
+  border-color: #a37759;
+  color: #f1b99b;
+}
+[data-theme="dark"] .audio-lock {
+  background: #2c4648;
+  color: #e3c78f;
+}
+[data-theme="dark"] .audio-wave {
+  color: #dfbb71;
+}
+[data-theme="dark"] .audio-transcript {
+  border-color: #45524f;
+}
+[data-theme="dark"] .quest-option {
+  border-color: #59634f;
+  background: #21373e;
+}
+[data-theme="dark"] .quest-option.is-selected {
+  border-color: #bba064;
+  background: #3a4230;
+}
+[data-theme="dark"] .quest-review li {
+  border-color: #45524f;
+}
+[data-theme="dark"] .quest-review p {
+  color: var(--muted);
+}
+[data-theme="dark"] .quest-review a {
+  color: #e0bf7b;
+}
+[data-theme="dark"] .feedback-page-heading > p:last-child {
+  color: #d1c4ad;
+}
+[data-theme="dark"] .feedback-page-heading .eyebrow {
+  color: #e0b77b;
+}
+[data-theme="dark"] .feedback-form {
+  background: #1c3036;
+  border-color: #5b5d47;
+  box-shadow: 0 18px 60px #00000014;
+}
+[data-theme="dark"] .feedback-form-header {
+  border-color: #46534b;
+}
+[data-theme="dark"] .feedback-form-symbol {
+  color: #efb38e;
+  background: #48372b;
+  border-color: #8b6247;
+}
+[data-theme="dark"] .feedback-story {
+  background: #2c342c;
+  border-color: #6c6144;
+}
+[data-theme="dark"] .feedback-desert-art {
+  background: linear-gradient(135deg, #67462e, #be854a);
+  border-color: #8e7149;
+}
+[data-theme="dark"] .feedback-story-badge {
+  color: #e5b386;
+}
+[data-theme="dark"] .feedback-story-copy h2 {
+  color: #f0dfbd;
+}
+[data-theme="dark"] .feedback-story-copy > p,
+[data-theme="dark"] .feedback-side-note {
+  color: #cabc9f;
+}
+[data-theme="dark"] .feedback-progress-card {
+  background: #263c33;
+  border-color: #556c4f;
+}
+[data-theme="dark"] .feedback-progress-heading strong {
+  color: #e6d8b7;
+}
+[data-theme="dark"] .feedback-progress-heading > span,
+[data-theme="dark"] .feedback-progress-card li {
+  color: #bfb08d;
+}
+[data-theme="dark"] .feedback-progress-card li.is-complete {
+  color: #a7d4b7;
+}
+[data-theme="dark"] .feedback-progress {
+  background: #48523e;
+}
+[data-theme="dark"] .feedback-progress-dot {
+  border-color: #7b7957;
+}
+[data-theme="dark"] .feedback-rating legend,
+[data-theme="dark"] .feedback-control > label,
+[data-theme="dark"] .feedback-topics legend {
+  color: #ecdfc7;
+}
+[data-theme="dark"] .feedback-step {
+  background: #3c3f2d;
+  border-color: #746d47;
+  color: #dfbf77;
+}
+[data-theme="dark"] .feedback-mood {
+  background: #24373b;
+  border-color: #526054;
+  color: #c9c0ad;
+}
+[data-theme="dark"] .feedback-mood[data-mood="1"] {
+  --mood: #eda98e;
+  --mood-light: #48322c;
+}
+[data-theme="dark"] .feedback-mood[data-mood="2"] {
+  --mood: #e3c17c;
+  --mood-light: #423c29;
+}
+[data-theme="dark"] .feedback-mood[data-mood="3"] {
+  --mood: #9acdb7;
+  --mood-light: #274137;
+}
+[data-theme="dark"] .feedback-mood[data-mood="4"] {
+  --mood: #9cbedd;
+  --mood-light: #2b4051;
+}
+[data-theme="dark"] .feedback-mood[data-mood="5"] {
+  --mood: #efc978;
+  --mood-light: #4a3f27;
+}
+[data-theme="dark"] .feedback-mood.is-selected {
+  color: var(--mood);
+  background: var(--mood-light);
+  border-color: var(--mood);
+}
+[data-theme="dark"] .feedback-mood-check {
+  color: #183035;
+}
+[data-theme="dark"] .feedback-mood-value,
+[data-theme="dark"] .feedback-rating-caption,
+[data-theme="dark"] .feedback-prompt-label,
+[data-theme="dark"] .feedback-field-help,
+[data-theme="dark"] .feedback-privacy {
+  color: #c4b596;
+}
+[data-theme="dark"] .feedback-topics {
+  border-color: #46534b;
+}
+[data-theme="dark"] .feedback-topic {
+  background: #283b3c;
+  border-color: #596355;
+  color: #c9c1ae;
+}
+[data-theme="dark"] .feedback-topic.is-selected {
+  background: #2b473c;
+  border-color: #82ae91;
+  color: #b5dfbd;
+}
+[data-theme="dark"] .feedback-topic[data-topic="accessibility"].is-selected {
+  background: #2c4156;
+  border-color: #8baccd;
+  color: #bbd5ec;
+}
+[data-theme="dark"] .feedback-topic[data-topic="services"].is-selected {
+  background: #4a362d;
+  border-color: #c69c78;
+  color: #edb997;
+}
+[data-theme="dark"] .feedback-prompts button {
+  background: #3b3d2b;
+  border-color: #7a724b;
+  color: #e8cb8f;
+}
+[data-theme="dark"] .feedback-prompts button:hover:not(:disabled) {
+  background: #4b4930;
+  border-color: #bca35f;
+}
+[data-theme="dark"] .feedback-control .field {
+  background: #162a30;
+  border-color: #60705b;
+  color: #f0e6d2;
+}
+[data-theme="dark"] .feedback-control .field::placeholder {
+  color: #afa48e;
+}
+[data-theme="dark"] .feedback-control .field:focus {
+  border-color: #8bc4ad;
+  box-shadow: 0 0 0 3px #6ba58c22;
+}
+[data-theme="dark"] .feedback-character-track {
+  background: #46513e;
+}
+[data-theme="dark"] .feedback-consent {
+  background: #27392f;
+  border-color: #5a654b;
+}
+[data-theme="dark"] .feedback-consent label {
+  color: #d2c5aa;
+}
+[data-theme="dark"] .feedback-field-error {
+  color: #f0b598;
+}
+[data-theme="dark"] .feedback-error-summary,
+[data-theme="dark"] .feedback-request-error {
+  background: #46332a;
+  border-color: #ab805a;
+  color: #f0be9d;
+}
+[data-theme="dark"] .feedback-submit {
+  background: linear-gradient(110deg, #2c7771, #275e70);
+  color: white;
+}
+[data-theme="dark"] .feedback-submit:hover:not(:disabled) {
+  background: linear-gradient(110deg, #368c80, #2c7280);
+}
+[data-theme="dark"] .feedback-confirmation {
+  background:
+    radial-gradient(ellipse at 90% 0, #8c6e3030, transparent 55%), #1e3436;
+  border-color: #8a774d;
+}
+[data-theme="dark"] .feedback-check {
+  background: #2c4a3c;
+  border-color: #7da187;
+  color: #c5e8c9;
+}
+[data-theme="dark"] .feedback-receipt-mood {
+  background: #433f28;
+  border-color: #9c8951;
+  color: #ebce8f;
+}
+[data-theme="dark"] .feedback-reference {
+  color: #c2b394;
+}
+@media (max-width: 900px) {
+  [data-theme="dark"] .feedback-story {
+    background: transparent;
+    border: 0;
+  }
+}
+@media (max-width: 600px) {
+  .nav-actions {
+    gap: 8px;
+  }
+  .brand-words {
+    max-width: 110px;
+  }
+  .brand-words strong {
+    font-size: 14px;
+  }
+  .brand-words > span {
+    display: none;
+  }
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 360px) {
+  .brand-words {
+    max-width: 95px;
+  }
+  .nav-actions {
+    gap: 5px;
+  }
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+  .menu-toggle {
+    width: 44px;
+  }
+}

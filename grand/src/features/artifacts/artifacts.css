@@ -1,0 +1,543 @@
+.collection-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.collection-intro {
+  max-width: 43rem;
+  font-size: 1rem;
+  color: #62685e;
+  line-height: 1.85;
+}
+.collection-edition {
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 1px solid #b3a28a;
+  padding-bottom: 0.6rem;
+  color: #7a644d;
+}
+.collection-search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0.75rem;
+  background: #fffdf8;
+  border: 1px solid #d8cfbf;
+  border-radius: 4px;
+}
+.collection-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0.65rem 0;
+}
+.collection-search:focus-within {
+  outline: 2px solid #805b18;
+  outline-offset: 3px;
+}
+.collection-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid #ddd3c2;
+}
+.collection-filter-field {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+}
+.collection-filter-field label {
+  color: #7b7569;
+}
+.collection-filter-field select {
+  border: 0;
+  background: transparent;
+  max-width: 12rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+.collection-reset {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 0;
+  background: transparent;
+  color: #805b18;
+  text-decoration: underline;
+  font-size: 0.875rem;
+  min-height: 44px;
+}
+.collection-result-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.4rem 0;
+  font-size: 0.875rem;
+  color: #666b61;
+}
+.collection-result-bar > span {
+  font-size: 0.8125rem;
+}
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.7rem;
+}
+.artifact-card-link {
+  display: block;
+  border: 1px solid #e0d7c7;
+  background: #fffdf8;
+  border-radius: 3px;
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.artifact-card-link:hover {
+  box-shadow: 0 15px 35px #49311912;
+  transform: translateY(-4px);
+}
+.artifact-card-image {
+  position: relative;
+  aspect-ratio: 1.08;
+  background: #ded0bb;
+  overflow: hidden;
+}
+.artifact-card-image > img {
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.artifact-card-link:hover .artifact-card-image > img {
+  transform: scale(1.035);
+}
+.artifact-card-category {
+  position: absolute;
+  top: 1rem;
+  inset-inline-start: 1rem;
+  background: #fffdf1e6;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8125rem;
+}
+.artifact-card-open {
+  position: absolute;
+  bottom: 1rem;
+  inset-inline-end: 1rem;
+  display: grid;
+  place-items: center;
+  background: #fffdf1;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+}
+.artifact-card-copy {
+  padding: 1.4rem 1.4rem 1rem;
+}
+.artifact-card-copy > .eyebrow {
+  font-size: 0.8125rem;
+  margin: 0 0 0.65rem;
+}
+.artifact-card-copy h3 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+}
+.artifact-card-description {
+  font-size: 0.875rem;
+  color: #6c7165;
+  margin: 0 0 1.4rem;
+  line-height: 1.6;
+}
+.artifact-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid #e9e2d5;
+  padding-top: 0.9rem;
+  font-size: 0.8125rem;
+  color: #687060;
+}
+.artifact-card-footer > span {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.collection-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2.3rem;
+}
+.collection-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  min-height: 20rem;
+  padding: 3rem 1.5rem;
+}
+.collection-state p {
+  max-width: 30rem;
+  color: #62685e;
+}
+.collection-disclaimer {
+  font-size: 0.8125rem;
+  color: #716c60;
+  line-height: 1.85;
+  border-top: 1px solid #ded4c3;
+  padding-top: 1.3rem;
+  margin-top: 3.5rem;
+  max-width: 58rem;
+}
+.artifact-skeleton {
+  border: 1px solid #e3dacb;
+  background: #fffdf8;
+  padding-bottom: 1.3rem;
+}
+.artifact-skeleton > div {
+  aspect-ratio: 1.08;
+  background: #e5dccd;
+  animation: artifact-pulse 1.7s infinite;
+}
+.artifact-skeleton > span {
+  display: block;
+  width: 60%;
+  height: 1rem;
+  background: #e8e1d5;
+  margin: 1.1rem 1.3rem;
+}
+.artifact-skeleton > span:last-child {
+  width: 40%;
+  height: 0.6rem;
+}
+@keyframes artifact-pulse {
+  50% {
+    opacity: 0.4;
+  }
+}
+.artifact-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+.artifact-breadcrumb a {
+  color: #805b18;
+}
+.artifact-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.artifact-detail-figure {
+  margin: 0;
+}
+.artifact-detail-image {
+  position: relative;
+  aspect-ratio: 1;
+  background: #ded0bb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.artifact-detail-image > img {
+  object-fit: cover;
+}
+.artifact-detail-figure figcaption {
+  font-size: 0.8125rem;
+  color: #766c59;
+  margin-top: 0.7rem;
+}
+.artifact-detail-copy .page-heading {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.15;
+  margin: 1rem 0;
+}
+.artifact-detail-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #805b18;
+}
+.artifact-detail-description {
+  line-height: 1.9;
+  color: #626b5a;
+}
+.artifact-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 0;
+  border-block: 1px solid #d9ceba;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+.artifact-facts dt {
+  font-size: 0.8125rem;
+  color: #75674f;
+  margin-bottom: 0.6rem;
+}
+.artifact-facts dd {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.artifact-detail-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.artifact-story {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  border-block: 1px solid #d9ceba;
+  padding-block: 2.8rem;
+  margin-block: 4rem 2rem;
+}
+.artifact-story > p {
+  font-size: 1.03rem;
+  line-height: 2;
+  color: #5e685c;
+  margin: 0;
+}
+.artifact-qr {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: #ede5d7;
+}
+.artifact-qr > div > p.muted {
+  line-height: 1.9;
+  font-size: 0.9rem;
+}
+.artifact-qr-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.artifact-qr-image {
+  border: 1px solid #dfd3be;
+  flex-shrink: 0;
+}
+.artifact-qr-placeholder {
+  display: grid;
+  place-items: center;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  background: #fffdf8;
+  font-size: 0.875rem;
+}
+.artifact-qr-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+  flex: 1;
+}
+.artifact-qr-actions label {
+  font-size: 0.8125rem;
+}
+.artifact-qr-actions input {
+  font-size: 0.8125rem;
+}
+.artifact-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #805b18;
+  font-size: 0.875rem;
+}
+.artifact-related {
+  margin-top: 4rem;
+}
+.artifact-related-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.artifact-related-heading > a {
+  color: #805b18;
+  font-size: 0.875rem;
+}
+[dir="rtl"] .artifact-card-copy h3 {
+  font-size: 1.3rem;
+}
+@media (max-width: 1024px) {
+  .artifact-detail-grid {
+    gap: 2rem;
+  }
+  .artifact-qr {
+    grid-template-columns: 1fr;
+  }
+  .artifact-qr-content {
+    max-width: 36rem;
+  }
+  .artifact-grid {
+    gap: 1rem;
+  }
+  .artifact-card-copy {
+    padding: 1.1rem;
+  }
+  .artifact-card-footer {
+    font-size: 0.8125rem;
+  }
+  .artifact-card-copy h3 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 800px) {
+  .artifact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .collection-heading {
+    display: block;
+  }
+  .collection-edition {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  .artifact-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .artifact-story {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  .collection-result-bar > span {
+    max-width: 10rem;
+    text-align: end;
+  }
+}
+@media (max-width: 600px) {
+  .artifact-grid {
+    grid-template-columns: 1fr;
+  }
+  .artifact-card-image {
+    aspect-ratio: 1.22;
+  }
+  .collection-search {
+    gap: 0.55rem;
+  }
+  .collection-search .button {
+    padding-inline: 0.9rem;
+  }
+  .collection-search input {
+    font-size: 0.875rem;
+  }
+  .collection-toolbar {
+    gap: 0.5rem 1rem;
+  }
+  .collection-filter-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    flex: 1;
+    font-size: 0.8125rem;
+  }
+  .collection-filter-field select {
+    max-width: 100%;
+    width: 100%;
+  }
+  .collection-reset {
+    margin-inline-start: 0;
+  }
+  .artifact-qr {
+    padding: 1.3rem;
+  }
+  .artifact-qr-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .artifact-qr-image,
+  .artifact-qr-placeholder {
+    align-self: center;
+  }
+  .artifact-related-heading {
+    gap: 1rem;
+  }
+  .artifact-related-heading > a {
+    white-space: nowrap;
+  }
+  .collection-pagination {
+    gap: 0.6rem;
+  }
+  .collection-pagination .button {
+    padding: 0.7rem;
+    font-size: 0.875rem;
+  }
+  .artifact-detail-subtitle {
+    font-size: 1.2rem;
+  }
+}
+.artifact-card-image {
+  aspect-ratio: 4 / 3;
+  background: #eae2d4;
+}
+.artifact-card-image > img {
+  object-fit: contain;
+  padding: 16px;
+}
+.artifact-detail-image > img {
+  object-fit: contain;
+  padding: 18px;
+}
+.artifact-card-description {
+  font-size: 16px;
+  color: #655f55;
+}
+.artifact-card-footer {
+  font-size: 13px;
+}
+.artifact-card-copy > .eyebrow {
+  font-size: 12px;
+}
+.artifact-card-copy h3 {
+  font-size: 26px;
+}
+.collection-intro {
+  font-size: 17px;
+}
+.collection-filter-field {
+  font-size: 14px;
+}
+.artifact-qr-actions input {
+  font-size: 14px;
+}
+.artifact-detail-figure figcaption .photo-credit {
+  font-size: 13px;
+}
+[dir="rtl"] .artifact-card-copy h3 {
+  font-size: 23px;
+}
+@media (max-width: 600px) {
+  .artifact-card-description {
+    font-size: 16px;
+  }
+  .artifact-card-footer {
+    font-size: 13px;
+  }
+  .artifact-card-image {
+    aspect-ratio: 4 / 3;
+  }
+}

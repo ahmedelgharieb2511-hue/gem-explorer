@@ -1,0 +1,13 @@
+{
+  "name": "gem-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix grand run dev",
+    "build": "npm --prefix grand run build",
+    "start": "npm --prefix grand run start",
+    "typecheck": "npm --prefix grand run typecheck",
+    "test": "npm --prefix grand test",
+    "test:e2e": "npm --prefix grand run test:e2e",
+    "install:app": "npm --prefix grand ci"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "golden-mask": {
+    "width": 1339,
+    "height": 1934,
+    "candidates": [
+      {
+        "src": "/images/photos/golden-mask-480.webp",
+        "width": 480,
+        "bytes": 43294
+      },
+      {
+        "src": "/images/photos/golden-mask-768.webp",
+        "width": 768,
+        "bytes": 79560
+      },
+      {
+        "src": "/images/photos/golden-mask-1200.webp",
+        "width": 1200,
+        "bytes": 151948
+      }
+    ]
+  },
+  "ramses-ii": {
+    "width": 3024,
+    "height": 4032,
+    "candidates": [
+      {
+        "src": "/images/photos/ramses-ii-480.webp",
+        "width": 480,
+        "bytes": 60208
+      },
+      {
+        "src": "/images/photos/ramses-ii-768.webp",
+        "width": 768,
+        "bytes": 138050
+      },
+      {
+        "src": "/images/photos/ramses-ii-1200.webp",
+        "width": 1200,
+        "bytes": 309932
+      }
+    ]
+  },
+  "seated-scribe": {
+    "width": 1800,
+    "height": 1800,
+    "candidates": [
+      {
+        "src": "/images/photos/seated-scribe-480.webp",
+        "width": 480,
+        "bytes": 13706
+      },
+      {
+        "src": "/images/photos/seated-scribe-768.webp",
+        "width": 768,
+        "bytes": 27708
+      },
+      {
+        "src": "/images/photos/seated-scribe-1200.webp",
+        "width": 1200,
+        "bytes": 52742
+      }
+    ]
+  },
+  "lotus-chalice": {
+    "width": 1838,
+    "height": 1324,
+    "candidates": [
+      {
+        "src": "/images/photos/lotus-chalice-480.webp",
+        "width": 480,
+        "bytes": 9990
+      },
+      {
+        "src": "/images/photos/lotus-chalice-768.webp",
+        "width": 768,
+        "bytes": 23480
+      },
+      {
+        "src": "/images/photos/lotus-chalice-1200.webp",
+        "width": 1200,
+        "bytes": 49718
+      }
+    ]
+  },
+  "broad-collar": {
+    "width": 1200,
+    "height": 1060,
+    "candidates": [
+      {
+        "src": "/images/photos/broad-collar-480.webp",
+        "width": 480,
+        "bytes": 33628
+      },
+      {
+        "src": "/images/photos/broad-collar-768.webp",
+        "width": 768,
+        "bytes": 80278
+      },
+      {
+        "src": "/images/photos/broad-collar-1200.webp",
+        "width": 1200,
+        "bytes": 183342
+      }
+    ]
+  },
+  "shabti": {
+    "width": 1169,
+    "height": 1800,
+    "candidates": [
+      {
+        "src": "/images/photos/shabti-480.webp",
+        "width": 480,
+        "bytes": 21972
+      },
+      {
+        "src": "/images/photos/shabti-768.webp",
+        "width": 768,
+        "bytes": 52538
+      },
+      {
+        "src": "/images/photos/shabti-1200.webp",
+        "width": 1169,
+        "bytes": 122190
+      }
+    ]
+  },
+  "alabaster-vessel": {
+    "width": 920,
+    "height": 1200,
+    "candidates": [
+      {
+        "src": "/images/photos/alabaster-vessel-480.webp",
+        "width": 480,
+        "bytes": 8238
+      },
+      {
+        "src": "/images/photos/alabaster-vessel-768.webp",
+        "width": 768,
+        "bytes": 17122
+      },
+      {
+        "src": "/images/photos/alabaster-vessel-1200.webp",
+        "width": 920,
+        "bytes": 23264
+      }
+    ]
+  },
+  "isis-statuette": {
+    "width": 650,
+    "height": 1200,
+    "candidates": [
+      {
+        "src": "/images/photos/isis-statuette-480.webp",
+        "width": 480,
+        "bytes": 27206
+      },
+      {
+        "src": "/images/photos/isis-statuette-768.webp",
+        "width": 650,
+        "bytes": 52736
+      }
+    ]
+  },
+  "abu-simbel": {
+    "width": 2080,
+    "height": 1368,
+    "candidates": [
+      {
+        "src": "/images/photos/abu-simbel-480.webp",
+        "width": 480,
+        "bytes": 26996
+      },
+      {
+        "src": "/images/photos/abu-simbel-768.webp",
+        "width": 768,
+        "bytes": 59930
+      },
+      {
+        "src": "/images/photos/abu-simbel-1200.webp",
+        "width": 1200,
+        "bytes": 120606
+      }
+    ]
+  }
+}

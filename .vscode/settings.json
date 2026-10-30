@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "**/.next/**/*.html": "plaintext"
+  },
+  "files.exclude": {
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/.next/**": true
+  }
+}
